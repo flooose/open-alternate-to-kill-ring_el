@@ -1,0 +1,21 @@
+This project represents an attempt to create an alternative to
+emacs' find-alternate-file that allows one to undo changes introduced
+by said function. Other alternatives may exist, but I haven't found
+them.
+
+Installation
+============
+
+Put this file in your load path and put:
+
+  (require 'open-alternate-to-kill-ring)
+
+This makes the funtion available. At this point you can re-bind
+C-x, C-v to call "open-alternative-to-kill-ring" by putting
+
+  (global-set-key (kbd "C-x C-v") 'open-alternate-to-kill-ring)
+
+into your init file.
+
+TODO: this is temporary functionality. Ideally, changes introduced
+by C-x, C-v should be able to be undone by a simple C-/
